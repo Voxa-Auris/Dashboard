@@ -61,6 +61,13 @@ export default function DashboardLayout({ children, user, profile }: DashboardLa
                   Alle Gesprekken
                 </a>
                 <a
+                  href="/dashboard/webhooks"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <span>🔗</span>
+                  Webhooks
+                </a>
+                <a
                   href="/dashboard/analytics"
                   className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
                 >

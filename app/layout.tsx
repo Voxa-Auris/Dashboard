@@ -1,11 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+// Temporarily disabled Google Fonts due to build environment network restrictions
+// Will work fine on Vercel
+// const inter = Inter({
+//   variable: "--font-inter",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Voxa Auris Dashboard",
@@ -36,9 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
-      <body
-        className={`${inter.variable} antialiased`}
-      >
+      <body className="antialiased font-sans">
         {children}
       </body>
     </html>
