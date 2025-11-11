@@ -8,12 +8,13 @@ interface ConversionChartProps {
     conversie: number
     target: number
   }>
+  title?: string
 }
 
-export default function ConversionChart({ data }: ConversionChartProps) {
+export default function ConversionChart({ data, title = 'Conversie Trend' }: ConversionChartProps) {
   return (
     <div className="bg-card border border-border rounded-xl p-6">
-      <h3 className="text-lg font-semibold mb-4">Conversie Trend</h3>
+      <h3 className="text-lg font-semibold mb-4">{title}</h3>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={data}>
           <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" />

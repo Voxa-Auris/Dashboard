@@ -9,12 +9,13 @@ interface RevenueChartProps {
     waarde: number
     marge: number
   }>
+  title?: string
 }
 
-export default function RevenueChart({ data }: RevenueChartProps) {
+export default function RevenueChart({ data, title = 'Kosten vs Waarde' }: RevenueChartProps) {
   return (
     <div className="bg-card border border-border rounded-xl p-6">
-      <h3 className="text-lg font-semibold mb-4">Kosten vs Waarde</h3>
+      <h3 className="text-lg font-semibold mb-4">{title}</h3>
       <ResponsiveContainer width="100%" height={300}>
         <AreaChart data={data}>
           <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" />
